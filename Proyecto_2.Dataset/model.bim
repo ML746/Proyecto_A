@@ -213,6 +213,15 @@
             "expression": "SELECTEDVALUE(Pregunta[id_Pregunta])",
             "formatString": "0",
             "lineageTag": "62a674c3-9131-4490-9758-491a6f5d1342"
+          },
+          {
+            "name": "Suma_Rangos",
+            "expression": [
+              "",
+              "    SUM(Rangos[1])"
+            ],
+            "formatString": "0",
+            "lineageTag": "762aabb0-aa08-4b1c-8a88-06fec3319192"
           }
         ],
         "partitions": [
