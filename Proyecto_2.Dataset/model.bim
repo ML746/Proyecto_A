@@ -1,0 +1,658 @@
+{
+  "compatibilityLevel": 1550,
+  "model": {
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.122.1066.0 (23.10)"
+      },
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"Encuestado\",\"Pregunta\",\"Preguntas\",\"Rangos\",\"Palabras\"]"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "en-US",
+    "cultures": [
+      {
+        "name": "en-US",
+        "linguisticMetadata": {
+          "content": {
+            "DynamicImprovement": "HighConfidence",
+            "Entities": {
+              "encuestado.sector": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Encuestado",
+                    "ConceptualProperty": "Sector"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Tipo": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "pregunta.pregunta": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Pregunta",
+                    "ConceptualProperty": "Pregunta"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Tipo de pregunta": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "pregunta.pregunta2": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Pregunta",
+                    "ConceptualProperty": "Pregunta2"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Tipo de pregunta": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "preguntas.calificacion": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Preguntas",
+                    "ConceptualProperty": "Calificacion"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "N° de respuesta": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              }
+            },
+            "Language": "en-US",
+            "Version": "2.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "relationships": [
+      {
+        "name": "4d0c719d-8601-4d2c-b13b-53f7bfb4e204",
+        "fromColumn": "id_Encuestado",
+        "fromTable": "Preguntas",
+        "toColumn": "id_Encuestado",
+        "toTable": "Encuestado"
+      },
+      {
+        "name": "d86948bb-9530-48f7-958a-cbcd3455d1e7",
+        "fromColumn": "id_Pregunta",
+        "fromTable": "Preguntas",
+        "toColumn": "id_Pregunta",
+        "toTable": "Pregunta"
+      },
+      {
+        "name": "11a81dbd-176f-4d29-85e5-5e43209d89e4",
+        "crossFilteringBehavior": "bothDirections",
+        "fromCardinality": "one",
+        "fromColumn": "id_Pregunta",
+        "fromTable": "Rangos",
+        "toColumn": "id_Pregunta",
+        "toTable": "Pregunta"
+      },
+      {
+        "name": "8562e8d4-4350-4165-ba16-449c1432cce2",
+        "fromColumn": "id_Encuestado",
+        "fromTable": "Palabras",
+        "toColumn": "id_Encuestado",
+        "toTable": "Encuestado"
+      },
+      {
+        "name": "05d19e56-7a72-4185-a360-d9fa456ebfab",
+        "fromColumn": "id_Pregunta",
+        "fromTable": "Palabras",
+        "toColumn": "id_Pregunta",
+        "toTable": "Pregunta"
+      }
+    ],
+    "sourceQueryCulture": "es-AR",
+    "tables": [
+      {
+        "name": "Encuestado",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          }
+        ],
+        "columns": [
+          {
+            "name": "id_Encuestado",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "0e7d9b3b-af72-4806-8db3-5bfc80a45a17",
+            "sourceColumn": "id_Encuestado",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Sector",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "6263f8da-331d-43ec-a10e-c48d09ef551c",
+            "sourceColumn": "Sector",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "baf12818-7b79-418d-a6ca-150556e05d89",
+        "measures": [
+          {
+            "name": "Filtro_Cerrada_1",
+            "expression": "SELECTEDVALUE(Pregunta[id_Pregunta])",
+            "formatString": "0",
+            "lineageTag": "62a674c3-9131-4490-9758-491a6f5d1342"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Encuestado-5b4636c2-1cda-45c2-a482-01d292e067f2",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Excel.Workbook(File.Contents(\"C:\\Users\\martinlopez\\OneDrive - Bolsa de Cereales de Buenos Aires\\Users\\Escritorio_ABC\\Proyectos\\Proyecto_Agile\\ColaboradoresBC_López_Entregas\\Data_Encuestas.xlsx\"), null, true),",
+                "    Encuestado_Sheet = Source{[Item=\"Encuestado\",Kind=\"Sheet\"]}[Data],",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(Encuestado_Sheet, [PromoteAllScalars=true]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"id_Encuestado\", Int64.Type}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Pregunta",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          }
+        ],
+        "columns": [
+          {
+            "name": "id_Pregunta",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "2d659ea2-0abb-49e0-b262-7b3822446947",
+            "sourceColumn": "id_Pregunta",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Pregunta",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "17314257-3021-43c2-ad6f-02255a2d989c",
+            "sourceColumn": "Pregunta",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Pregunta2",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c4df3774-e705-40bd-9bda-b77768a600cc",
+            "sourceColumn": "Pregunta2",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "0a95e507-1847-414b-aefb-50bcd3c15684",
+        "partitions": [
+          {
+            "name": "Pregunta-7ae2f2e1-cd67-4319-a355-52433699fc00",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Excel.Workbook(File.Contents(\"C:\\Users\\martinlopez\\OneDrive - Bolsa de Cereales de Buenos Aires\\Users\\Escritorio_ABC\\Proyectos\\Proyecto_Agile\\ColaboradoresBC_López_Entregas\\Data_Encuestas.xlsx\"), null, true),",
+                "    Pregunta_Sheet = Source{[Item=\"Pregunta\",Kind=\"Sheet\"]}[Data],",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(Pregunta_Sheet, [PromoteAllScalars=true]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"id_Pregunta\", Int64.Type}, {\"Pregunta\", type text}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Preguntas",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          }
+        ],
+        "columns": [
+          {
+            "name": "id_Pregunta",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "cdfa1ff8-f51b-48d1-b117-df456393461e",
+            "sourceColumn": "id_Pregunta",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "id_Encuestado",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "f3fea324-2bcb-499e-af61-981dfc323a0e",
+            "sourceColumn": "id_Encuestado",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Calificacion",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "44e5f723-e33a-4b23-9980-d0c77e2b10c1",
+            "sourceColumn": "Calificacion",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Palabra 1",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "02873748-c9bc-408b-a249-c2d83f3a39fd",
+            "sourceColumn": "Palabra 1",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Palabra 2",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "aecee3d0-8c17-479b-9390-04d8dff5020c",
+            "sourceColumn": "Palabra 2",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Palabra 3",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8a5ca993-d46e-4fb6-8055-caf2861a7fc0",
+            "sourceColumn": "Palabra 3",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Palabra 4",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "30398621-92cf-495b-a351-f2948cdd34e4",
+            "sourceColumn": "Palabra 4",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "3799310e-4730-4a05-83a7-333977e80ce6",
+        "partitions": [
+          {
+            "name": "Preguntas-a154a777-0424-4e5b-a7e5-7b4392c03400",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Excel.Workbook(File.Contents(\"C:\\Users\\martinlopez\\OneDrive - Bolsa de Cereales de Buenos Aires\\Users\\Escritorio_ABC\\Proyectos\\Proyecto_Agile\\ColaboradoresBC_López_Entregas\\Data_Encuestas.xlsx\"), null, true),",
+                "    Preguntas_Sheet = Source{[Item=\"Preguntas\",Kind=\"Sheet\"]}[Data],",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(Preguntas_Sheet, [PromoteAllScalars=true]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"id_Pregunta\", Int64.Type}, {\"id_Encuestado\", Int64.Type}, {\"Calificacion\", Int64.Type}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Rangos",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "id_Pregunta",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "b89f147a-fab5-48e0-a855-860c2b48cdbf",
+            "sourceColumn": "id_Pregunta",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "1",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4d5e5993-dd86-48cb-9746-409e250d49aa",
+            "sourceColumn": "1",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "2",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "5a4152cd-f7ee-45db-9a7a-3ce3546fddf6",
+            "sourceColumn": "2",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "3",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "03d1cb0d-ccaf-4286-821c-cf22187cafe7",
+            "sourceColumn": "3",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "4",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "bee46f3c-0213-401c-bd35-e44bb3858d90",
+            "sourceColumn": "4",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "5",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "aea11fdf-7b7d-4f9f-b600-5af536f8382d",
+            "sourceColumn": "5",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "1a09e696-ebc2-49f1-a8d6-9ea759ca17f6",
+        "partitions": [
+          {
+            "name": "Rangos-749896dd-d89f-4f0b-8598-da44037ae7f9",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Excel.Workbook(File.Contents(\"C:\\Users\\martinlopez\\OneDrive - Bolsa de Cereales de Buenos Aires\\Users\\Escritorio_ABC\\Proyectos\\Proyecto_Agile\\ColaboradoresBC_López_Entregas\\Data_Encuestas.xlsx\"), null, true),",
+                "    Rangos_Sheet = Source{[Item=\"Rangos\",Kind=\"Sheet\"]}[Data],",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Rangos_Sheet,{{\"Column1\", type any}, {\"Column2\", type any}, {\"Column3\", type any}, {\"Column4\", type any}, {\"Column5\", type any}, {\"Column6\", type any}}),",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(#\"Changed Type\", [PromoteAllScalars=true]),",
+                "    #\"Changed Type1\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"id_Pregunta\", Int64.Type}, {\"1\", type text}, {\"2\", type text}, {\"3\", type text}, {\"4\", type text}, {\"5\", type text}})",
+                "in",
+                "    #\"Changed Type1\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Palabras",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "id_Pregunta",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "99f91ecf-798b-46cf-8af3-2bd572d6bdf2",
+            "sourceColumn": "id_Pregunta",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "id_Encuestado",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "4faa4bc4-5020-4be1-9bc4-39e9a84513a7",
+            "sourceColumn": "id_Encuestado",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Calificacion",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "89f430f4-efc9-4a02-9079-cd5998171612",
+            "sourceColumn": "Calificacion",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Attribute",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "24cdd3dc-1bf8-4c59-999b-35634821bcd4",
+            "sourceColumn": "Attribute",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Value",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "84d62a2b-af37-4a24-9a14-a7ffed0689df",
+            "sourceColumn": "Value",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "03bfb726-a59c-4e90-bee3-414150f33c66",
+        "partitions": [
+          {
+            "name": "Palabras-5e4d989f-2ea9-4e97-b076-ce83201bf304",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Excel.Workbook(File.Contents(\"C:\\Users\\martinlopez\\OneDrive - Bolsa de Cereales de Buenos Aires\\Users\\Escritorio_ABC\\Proyectos\\Proyecto_Agile\\ColaboradoresBC_López_Entregas\\Data_Encuestas.xlsx\"), null, true),",
+                "    Preguntas_Sheet = Source{[Item=\"Preguntas\",Kind=\"Sheet\"]}[Data],",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(Preguntas_Sheet, [PromoteAllScalars=true]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"id_Pregunta\", Int64.Type}, {\"id_Encuestado\", Int64.Type}, {\"Calificacion\", Int64.Type}}),",
+                "    #\"Unpivoted Other Columns\" = Table.UnpivotOtherColumns(#\"Changed Type\", {\"id_Pregunta\", \"id_Encuestado\", \"Calificacion\"}, \"Attribute\", \"Value\")",
+                "in",
+                "    #\"Unpivoted Other Columns\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

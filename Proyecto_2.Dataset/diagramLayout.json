@@ -1,0 +1,87 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "nodeIndex": "Encuestado",
+          "nodeLineageTag": "baf12818-7b79-418d-a6ca-150556e05d89",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 536.5,
+            "y": 0
+          },
+          "nodeIndex": "Pregunta",
+          "nodeLineageTag": "0a95e507-1847-414b-aefb-50bcd3c15684",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 515.1,
+            "y": 268.4
+          },
+          "nodeIndex": "Preguntas",
+          "nodeLineageTag": "3799310e-4730-4a05-83a7-333977e80ce6",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 942.2,
+            "y": 0
+          },
+          "nodeIndex": "Rangos",
+          "nodeLineageTag": "1a09e696-ebc2-49f1-a8d6-9ea759ca17f6",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 226
+          },
+          "nodeIndex": "Palabras",
+          "nodeLineageTag": "03bfb726-a59c-4e90-bee3-414150f33c66",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}
